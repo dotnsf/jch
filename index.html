@@ -36,13 +36,6 @@ td{
   width: 90%;
   height: 400px;
 }
-#_html{
-  /*
-  padding-top: 100px;
-  background: url('https://www.illust-pocket.com/wp-content/uploads/2016/07/624.jpg') no-repeat;
-  background-size: 100% 100%;
-  */
-}
 </style>
 <script>
 $(function(){
@@ -54,30 +47,7 @@ function HTML(){
 
   var csstext = $('#csstext').val();
   if( csstext ){
-    var tmp1 = csstext.split( '}' );
-    for( var i = 0; i < tmp1.length; i ++ ){
-      var tmp2 = tmp1[i].split( '{' );
-      if( tmp2.length == 2 ){
-        var sel = tmp2[0].trim();
-        var attrs = tmp2[1].trim();
-        if( sel && attrs && attrs.indexOf( ';' ) > -1 ){
-          var tmp3 = attrs.split( ';' );
-          for( var j = 0; j < tmp3.length; j ++ ){
-            var tmp4 = tmp3[j].split( ':' );
-            if( tmp4.length == 2 ){
-              var elem = tmp4[0].trim();
-              var vals = tmp4[1].trim();
-              if( vals.length > 1 && ( vals.startsWith( '"' ) && vals.endsWith( '"' ) || vals.startsWith( "'" ) && vals.endsWith( "'" ) ) ){
-                vals = vals.substr( 1, vals.length - 2 );
-              }
-              if( elem && vals ){
-                $(sel).css( elem, vals );
-              }
-            }
-          }
-        }
-      }
-    }
+   $('#mystyle').text( csstext );
   }
 
   var jstext = $('#jstext').val();
@@ -86,6 +56,7 @@ function HTML(){
   }
 }
 </script>
+<style type="text/css" id="mystyle"></style>
 </head>
 <body>
 
