@@ -1,5 +1,5 @@
 {
-  "css": "#mySelect{\nheight: 40px;\nwidth: 200px;\n}\n#myInput{\nheight: 40px;\nwidth: 200px;\n}",
+  "css": "#mySelect{\n height: 40px;\n width: 200px;\n}\n#myInput{\n height: 40px;\n width: 200px;\n}",
   "javascript": "$('#mySelect').change(\n onSelectChange\n);\n\n$('#mySelect').dblclick( function( e ){\n $('#mySelect').css( 'display', 'none' );\n $('#myInput').css( 'display', 'block' );\n});\n\nfunction onSelectChange(){\n var v = $('#mySelect').val();\n $('#myInput').val( v );\n}\nonSelectChange();\n\n$('#myInput').blur( function( e ){\n var v = $('#myInput').val();\n var index = -1;\n $('#mySelect option').each( function( idx, element ){\n  if( v == $(element).attr('value') ){\n   index = idx;\n  }\n });\n if( index == -1 ){\n  $('#mySelect').append( '<option value=\"' + v + '\">' + v + '</option>' );\n  $('#mySelect').val( v );\n  $('#myInput').val( v );\n }\n $('#mySelect').css( 'display', 'block' );\n $('#myInput').css( 'display', 'none' );\n});\n",
   "html": "<select id=\"mySelect\">\n<option value=\"東京\">東京</option>\n<option value=\"大阪\">大阪</option>\n<option value=\"神奈川\">神奈川</option>\n<option value=\"名古屋\">名古屋</option>\n<option value=\"北海道\">北海道</option>\n</select>\n<input type=\"text\" id=\"myInput\" style=\"display:none;\" value=\"\"/>"
 }
