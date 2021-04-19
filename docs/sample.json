@@ -1,0 +1,5 @@
+{
+  "css": "#main{\n color: red;\n}",
+  "javascript": "$('#text').keyup( function( e ){\n if( e.which == 13 ){\n  showText();\n }\n});\n\nfunction showText(){\n var text = $('#text').val();\n alert( text );\n}",
+  "html": "<h3 id=\"main\">ハロー</h3>\n<hr/>\n<input type=\"text\" id=\"text\" value=\"Hello World!\"/>\n"
+}

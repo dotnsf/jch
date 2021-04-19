@@ -39,6 +39,42 @@ td{
 </style>
 <script>
 $(function(){
+  if( location.search && location.search.length > 1 ){
+    var t = location.search.substr( 1 );
+    if( t ){
+      var filename = "";
+      var t = t.split( '&' );
+      t.forEach( function( tmp ){
+        var param = tmp.split( '=' );
+        if( param.length == 2 && param[0] == 'file' ){
+          filename = param[1];
+        }
+      });
+
+      if( filename ){
+        $.ajax({
+          type: 'GET',
+          url: '/' + filename,
+          success: function( body ){
+            //console.log( 'body', body );
+            if( body.html ){
+              $('#htmltext').val( body.html );
+            }
+            if( body.css ){
+              $('#csstext').val( body.css );
+            }
+            if( body.javascript ){
+              $('#jstext').val( body.javascript );
+            }
+            HTML();
+          },
+          error: function( e0, e1, e2 ){
+            console.log( e0, e1, e2 );
+          }
+        });
+      }
+    }
+  }
 });
 
 function HTML(){
