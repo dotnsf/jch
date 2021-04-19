@@ -54,7 +54,7 @@ $(function(){
       if( filename ){
         $.ajax({
           type: 'GET',
-          url: '/' + filename,
+          url: './' + filename,
           success: function( body ){
             //console.log( 'body', body );
             if( body.html ){
