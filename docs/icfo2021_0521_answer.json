@@ -1,0 +1,5 @@
+{
+  "css": "",
+  "javascript": "$('#checkall').change( function( e ){\n var v = $('#checkall').prop( 'checked' );\n $('.mycheck').prop( 'checked', v );\n});",
+  "html": "<input type=\"checkbox\" id=\"checkall\"/>(All)<br/>\n<input type=\"checkbox\" class=\"mycheck\" id=\"check0\"/>Check 0<br/>\n<input type=\"checkbox\" class=\"mycheck\" id=\"check1\"/>Check 1<br/>\n<input type=\"checkbox\" class=\"mycheck\" id=\"check2\"/>Check 2<br/>\n<input type=\"checkbox\" class=\"mycheck\" id=\"check3\"/>Check 3<br/>\n<input type=\"checkbox\" class=\"mycheck\" id=\"check4\"/>Check 4<br/>"
+}

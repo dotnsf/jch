@@ -1,5 +1,0 @@
-{
-  "css": "#mySelect{\n height: 40px;\n width: 200px;\n}\n",
-  "javascript": "$('#mySelect').dblclick( function( e ){\n \n});\n\n",
-  "html": "<select id=\"mySelect\">\n<option value=\"東京\">東京</option>\n<option value=\"大阪\">大阪</option>\n<option value=\"神奈川\">神奈川</option>\n<option value=\"名古屋\">名古屋</option>\n<option value=\"北海道\">北海道</option>\n</select>\n"
-}
