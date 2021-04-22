@@ -1,5 +1,5 @@
 {
   "css": "",
-  "javascript": "",
-  "html": "<input type=\"checkbox\" id=\"checkall\"/>(All)<br/>\n<input type=\"checkbox\" id=\"check0\"/>Check 0<br/>\n<input type=\"checkbox\" id=\"check1\"/>Check 1<br/>\n<input type=\"checkbox\" id=\"check2\"/>Check 2<br/>\n<input type=\"checkbox\" id=\"check3\"/>Check 3<br/>\n<input type=\"checkbox\" id=\"check4\"/>Check 4<br/>"
+  "javascript": "$('#mybutton').click( function( e ){\n // id=mybutton のボタンがクリックされた\n alert( 'clicked' );\n});\n",
+  "html": "<h1 id=\"main\">ボタンをクリックすると色が変わるよ</h1>\n<input type=\"button\" id=\"mybutton\" value=\"button\"/>\n"
 }
