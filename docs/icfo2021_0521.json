@@ -1,5 +1,5 @@
 {
   "css": "",
-  "javascript": "$('#mybutton').click( function( e ){\n // id=mybutton のボタンがクリックされた\n alert( 'clicked' );\n});\n",
+  "javascript": "$('#mybutton').click( function( e ){\n // id=mybutton のボタンがクリックされた\n alert( 'クリックされました' );\n});\n",
   "html": "<h1 id=\"main\">ボタンをクリックすると色が変わるよ</h1>\n<input type=\"button\" id=\"mybutton\" value=\"button\"/>\n"
 }
