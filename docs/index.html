@@ -24,9 +24,11 @@ html, body{
 textarea{
   font-size: 10px;
 }
+/*
 th{
   width: 25%;
 }
+*/
 td{
   padding: 20px;
   text-align: left;
@@ -35,6 +37,9 @@ td{
 .mytexts{
   width: 90%;
   height: 400px;
+}
+#jch_table{
+  table-layout: fixed;
 }
 </style>
 <script>
@@ -128,7 +133,7 @@ function HTML(){
 
 <div class="container_">
 
-<table width="100%" border="1">
+<table id="jch_table" width="100%" border="1">
 <tr>
 <th class="row_javascript">
 <input type="button" value="JavaScript" onClick="HTML();"/>
