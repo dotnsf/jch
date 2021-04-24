@@ -1,5 +1,5 @@
 {
-  "css": "",
+  "css": { "display": "none", "content": "" },
   "javascript": "var count = -1;\nvar colors = [ 'green', 'yellow', 'red' ];\n\n$('#mybutton').click( function( e ){\n // id=mybutton のボタンがクリックされた\n count ++;\n $('#main').css( 'color', colors[count % colors.length] );\n});\n",
   "html": "<h1 id=\"main\">ボタンをクリックすると色が変わるよ</h1>\n<input type=\"button\" id=\"mybutton\" value=\"button\"/>\n"
 }

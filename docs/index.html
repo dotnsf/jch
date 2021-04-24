@@ -58,13 +58,43 @@ $(function(){
           success: function( body ){
             //console.log( 'body', body );
             if( body.html ){
-              $('#htmltext').val( body.html );
+              if( typeof body.html == 'string' ){
+                $('#htmltext').val( body.html );
+              }else if( typeof body.html == 'object' ){
+                Object.keys( body.html ).forEach( function( key ){
+                  if( key == 'content' ){
+                    $('#htmltext').val( body.html.content );
+                  }else{
+                    $('.row_html').css( key, body.html[key] );
+                  }
+                });
+              }
             }
             if( body.css ){
-              $('#csstext').val( body.css );
+              if( typeof body.css == 'string' ){
+                $('#csstext').val( body.css );
+              }else if( typeof body.css == 'object' ){
+                Object.keys( body.css ).forEach( function( key ){
+                  if( key == 'content' ){
+                    $('#csstext').val( body.css.content );
+                  }else{
+                    $('.row_css').css( key, body.css[key] );
+                  }
+                });
+              }
             }
             if( body.javascript ){
-              $('#jstext').val( body.javascript );
+              if( typeof body.javascript == 'string' ){
+                $('#jstext').val( body.javascript );
+              }else if( typeof body.javascript == 'object' ){
+                Object.keys( body.javascript ).forEach( function( key ){
+                  if( key == 'content' ){
+                    $('#jstext').val( body.javascript.content );
+                  }else{
+                    $('.row_javascript').css( key, body.javascript[key] );
+                  }
+                });
+              }
             }
             HTML();
           },
@@ -100,19 +130,19 @@ function HTML(){
 
 <table width="100%" border="1">
 <tr>
-<th>
+<th class="row_javascript">
 <input type="button" value="JavaScript" onClick="HTML();"/>
 </th>
-<th>
+<th class="row_css">
 <input type="button" value="CSS" onClick="HTML();"/>
 </th>
-<th>
+<th class="row_html">
 <input type="button" value="HTML" onClick="HTML();"/>
 </th>
 <th>Preview</th>
 </tr>
 <tr>
-<td>
+<td class="row_javascript">
 &lt;script src="jquery.js"&gt;&lt;/script&gt;<br/>
 &lt;script&gt;<br/>
 $(function(){<br/>
@@ -121,13 +151,13 @@ $(function(){<br/>
 });<br/>
 &lt;/script&gt;<br/>
 </td>
-<td>
+<td class="row_css">
 &lt;style&gt;<br/>
 <textarea id="csstext" class="mytexts">
 </textarea><br/>
 &lt;/style&gt;<br/>
 </td>
-<td>
+<td class="row_html">
 <textarea id="htmltext" class="mytexts">
 &lt;h2&gt; 50音 &lt;/h2&gt;
 &lt;div id="xxx"&gt;
